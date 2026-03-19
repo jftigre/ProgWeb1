@@ -8,63 +8,66 @@
 <body>
 
     <header>
-
         <h1>Dev Log de um Engenheiro de Software</h1>
         
         <nav>
-            <li><a href="/atividade3/jornada.html">Minha Jornada</a></li>
-            <li><a href="/atividade3/desafio.html">Desafio da programação web</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <ul>
+                <li><a href="jornada.html">Minha Jornada</a></li>
+                <li><a href="desafio.html">Desafio da programação web</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </nav>
-
     </header>
     
     <hr>
-    <main>
-
-    <section>
-        <h2>Bem-vindo ao meu Dev Log</h2>
-        <p>
-            Olá! Eu sou o João Tigre, estudante de Engenharia de Software no IFPB. Aqui compartilho minha evolução, desafios e aprendizados construção de uma vida profissional e acadêmica.
-        </p>
-    </section>
-
-
-    <section>
-    <h2>Publicações Recentes</h2>
-
-    <article>
-        <h3>Minha Jornada: Da UEPB ao IFPB</h3>
-        <time datetime="2026-03-18">18 de março de 2026</time>
-        <p>
-            Neste artigo, conto como foi minha transição de curso e quais são minhas expectativas para o futuro na Engenharia de Software...
-        </p>
-        <a href="/atividade3/jornada.html">Continuar lendo →</a>
-    </article>
-
-    <br> 
-    <article>
-        <h3>O Desafio da Programação Web 1</h3>
-        <time datetime="2026-03-18">18 de março de 2026</time>
-        <p>
-            Aprender semântica HTML é o primeiro passo para criar sites profissionais. Veja as tags que estou utilizando no meu primeiro projeto acadêmico...
-        </p>
-        <a href="/atividade3/desafio.html">Continuar lendo →</a>
-    </article>
     
-    </section>
+    <main id="home-content">
+
+        <section id="hero-intro">
+            <h2>Bem-vindo ao meu Dev Log</h2>
+            <div class="bio-wrapper">
+                <p>
+                    Olá! Eu sou o João Tigre, estudante de Engenharia de Software no IFPB. Aqui compartilho minha evolução, desafios e aprendizados construção de uma vida profissional e acadêmica.
+                </p>
+            </div>
+        </section>
+
+        <section id="recent-posts">
+            <h2>Publicações Recentes</h2>
+
+            <div class="posts-container">
+                <article class="post-card" id="post-jornada">
+                    <h3>Minha Jornada: Da UEPB ao IFPB</h3>
+                    <time datetime="2026-03-18">18 de março de 2026</time>
+                    <p>
+                        Neste artigo, conto como foi minha transição de curso e quais são minhas expectativas para o futuro na Engenharia de Software...
+                    </p>
+                    <a href="jornada.html" class="read-more">Continuar lendo →</a>
+                </article>
+
+                <br> 
+
+                <article class="post-card" id="post-desafio">
+                    <h3>O Desafio da Programação Web 1</h3>
+                    <time datetime="2026-03-18">18 de março de 2026</time>
+                    <p>
+                        Aprender semântica HTML é o primeiro passo para criar sites profissionais. Veja as tags que estou utilizando no meu primeiro projeto acadêmico...
+                    </p>
+                    <a href="desafio.html" class="read-more">Continuar lendo →</a>
+                </article>
+            </div>
+        </section>
 
     </main>
 
     <hr>
+    
     <footer id="contato">
-        
         <h3>Contatos:</h3>
         <ul>
             <li><a href="https://github.com/jftigre" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jo%C3%A3ofelipefiaritigre/">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/in/jo%C3%A3ofelipefiaritigre/" target="_blank">Linkedin</a></li>
         </ul>
-
     </footer>
 
 </body>
