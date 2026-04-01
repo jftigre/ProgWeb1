@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários</title>
+</head>
+
+<body>
+
+    <style>
+
+        body {
+            background-color: darkgray;
+        }
+
+        .tabela-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        thead {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        th[scope="row"] {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            width: 120px;
+        }
+
+        .intervalo {
+            background-color: #ecf0f1;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        tfoot {
+            background-color: #eee;
+            font-weight: bold;
+        }
+    </style>
+
+    <div class="tabela-container">
+        <table>
+
+            <caption>Horário Acadêmico 2026.1 - IFPB</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Vespertino</th>
+                    <th scope="col">Segunda</th>
+                    <th scope="col">Terça</th>
+                    <th scope="col">Quarta</th>
+                    <th scope="col">Quinta</th>
+                    <th scope="col">Sexta</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">13:00 - 13:50</th>
+                    <td rowspan="3">AOC<br><small>AUDITÓRIO DA UA2</small></td>
+                    <td rowspan="3">INTRO A PROG<br><small>AUDITÓRIO DA UA2</small></td>
+                    <td rowspan="3">CÁLCULO I<br><small>SALA DE PROF. Nº 16</small></td>
+                    <td rowspan="3">INTRO A PROG<br><small>AUDITÓRIO DA UA2</small></td>
+                    <td rowspan="3">CÁLCULO I<br><small>SALA DE PROF. Nº 16</small></td>
+                </tr>
+                <tr>
+                    <th scope="row">13:50 - 14:40</th>
+                </tr>
+                <tr>
+                    <th scope="row">14:40 - 15:30</th>
+                </tr>
+
+                <tr>
+                    <th scope="row">15:30 - 15:50</th>
+                    <td colspan="5" class="intervalo">INTERVALO</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">15:50 - 16:40</th>
+                    <td rowspan="2">PROG. WEB I<br><small>SALA DE INF. 57 (SI)</small></td>
+                    <td rowspan="2">INTRO ENG. SOFT<br><small>SALA DE INF. 57 (SI)</small></td>
+                    <td rowspan="2">PROG. WEB I<br><small>SALA DE INF. 57 (SI)</small></td>
+                    <td rowspan="2">INTRO ENG. SOFT<br><small>SALA DE INF. 57 (SI)</small></td>
+                    <td rowspan="2">EDUCAÇÃO AMBIENTAL<br><small>SALA DE INF. 57 (SI)</small></td>
+                </tr>
+                <tr>
+                    <th scope="row">16:40 - 17:30</th>
+                </tr>
+            </tbody>
+
+            <tfoot>
+
+                <tr>
+                    <th scope="row">TOTAL</th>
+                    <td colspan="5">Carga Horária: 25 Horas/Aula Semanais</td>
+                </tr>
+
+            </tfoot>
+            
+        </table>
+
+    </div>
+
+</body>
+
+</html>
