@@ -1,0 +1,106 @@
+:root {
+    --verde-escuro: #166534;
+    --verde-medio: #047857;
+    --cinza-claro: #F3F4F6;
+    --branco: #ffff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--verde-escuro);
+    padding: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--branco);
+}
+
+nav p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-left: 32px;
+}
+
+#menu-links a {
+    text-decoration: none;
+    color: var(--branco);
+    padding: 16px;
+    margin-right: 32px;
+}
+
+.content-epic {
+    background-color: rgb(29, 122, 29);
+    text-align: center;
+    padding: 8px;
+}
+
+.content-epic .text-epic h1 {
+    margin-top: 32px;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.content-epic .text-epic p{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.911);
+    max-width: 50%;
+    margin: 0 auto;
+    font-weight: lighter;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.card-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #135209;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: white;
+}
+
+.courses {
+    background-color: var(--cinza-claro);
+    padding: 16px;
+}
+
+.courses h2 {
+    color: var(--verde-escuro);
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.courses-cards {
+    display: flex;
+    justify-content: space-between;
+}   
+
+.card-course {
+    position: relative;
+    padding: 16px;
+    width: 300px;
+    background-color: var(--branco);
+    margin: 32px;
+    text-align: center;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-course h3 {
+    color: var(--verde-medio);
+}
