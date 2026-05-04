@@ -81,35 +81,62 @@
 
         <section class="datas">
 
-            <table> 
-                <tr>
-                    <th>Métrica</th>
-                    <th>Valor</th>
-                    <th>Meta</th>
-                </tr>
-                <tr>
-                    <td>Alunos Matriculados</td>
-                    <td>1.850</td>
-                    <td>2000</td>
-                </tr>
-                <tr>
-                    <td>Taxa de Aprovação</td>
-                    <td>87%</td>
-                    <td>90%</td>
-                </tr>
+            <h2>Nossos Números</h2>
 
-                <tr>
-                    <td>Projetos de Pesquisa</td>
-                    <td>45</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Professores Doutores</td>
-                    <td>35</td>
-                    <td>40</td>
-                </tr>
+            <table class="table"> 
+                
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Valor</th>
+                        <th>Meta 2025</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Alunos Matriculados</td>
+                        <td>1.850</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de Aprovação</td>
+                        <td>87%</td>
+                        <td>90%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Projetos de Pesquisa</td>
+                        <td>45</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Professores Doutores</td>
+                        <td>35</td>
+                        <td>40</td>
+                    </tr>
+                </tbody>
             </table>
-        </section>c
+        </section>
+
+        <section class="contact">
+            <h2>Entre em contato</h2>
+            
+            <div class="form">
+                <form action="/send-data" method="POST">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+
+                    <label for="mensage">Mensagem:</label>
+                    <textarea id="mensage" rows="4"></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
 
     </main>
 

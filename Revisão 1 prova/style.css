@@ -1,45 +1,68 @@
+/* ==========================================================================
+   1. VARIÁVEIS (CSS Custom Properties)
+   Serve para guardar cores e tamanhos que usamos muitas vezes. 
+   Se o cliente pedir para mudar o verde, mudamos só aqui e altera no site todo!
+   ========================================================================== */
 :root {
     --verde-escuro: #166534;
     --verde-medio: #047857;
     --cinza-claro: #F3F4F6;
-    --branco: #ffff;
+    --branco: #ffffff;
+}
+
+/* ==========================================================================
+   2. RESET GLOBAL E CONFIGURAÇÃO BASE (Aula 04)
+   ========================================================================== */
+* {
+    /* O asterisco (*) seleciona TODOS os elementos da página. */
+    padding: 0;
+    margin: 0;
+    
+    /* REGRA DE OURO (Box Model): Faz com que o padding e a borda não aumentem 
+       a largura total (width) da caixa. Evita que o layout quebre. */
+    box-sizing: border-box; 
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    /* Define a fonte padrão para todo o site. Cascata: os filhos herdam isso. */
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ==========================================================================
+   3. CABEÇALHO E NAVEGAÇÃO (Flexbox - Aula 06)
+   ========================================================================== */
 header {
-    background-color: var(--verde-escuro);
-    padding: 16px;
+    background-color: var(--verde-escuro); /* Usa a variável que criamos lá em cima */
+    padding: 16px;                         /* Espaço interno para não colar nas bordas */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;                   /* ATIVA O FLEXBOX: Põe os filhos lado a lado */
+    justify-content: space-between;  /* Empurra a Logo para a esquerda e o Menu para a direita */
+    align-items: center;             /* Centraliza os itens na vertical (eixo cruzado) */
     color: var(--branco);
+    flex-wrap: wrap;                 /* Permite que o menu quebre para a linha de baixo se a tela apertar */
 }
 
 nav p {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-left: 32px;
+    font-size: 1.25rem; /* 'rem' é melhor para acessibilidade do que 'px' */
+    font-weight: bold;  /* Texto em negrito */
+    margin-left: 32px;  /* Afasta a logo da borda esquerda */
 }
 
 #menu-links a {
-    text-decoration: none;
+    text-decoration: none; /* Tira aquele sublinhado feio padrão dos links */
     color: var(--branco);
     padding: 16px;
     margin-right: 32px;
 }
 
+/* ==========================================================================
+   4. SEÇÃO PRINCIPAL (Hero / Epic)
+   ========================================================================== */
 .content-epic {
     background-color: rgb(29, 122, 29);
-    text-align: center;
+    text-align: center; /* Centraliza todo o texto que está dentro desta caixa */
     padding: 8px;
 }
 
@@ -49,31 +72,37 @@ nav p {
     font-weight: bold;
 }
 
-.content-epic .text-epic p{
+.content-epic .text-epic p {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.911);
-    max-width: 50%;
-    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.911); /* Branco com um pouco de transparência */
+    max-width: 50%;                    /* O parágrafo não vai ocupar a tela toda, fica mais fácil de ler */
+    margin: 0 auto;                    /* Centraliza a própria caixa do parágrafo na tela */
     font-weight: lighter;
 }
 
+/* ==========================================================================
+   5. BOTÕES (Interatividade)
+   ========================================================================== */
 .cards {
-    display: flex;
-    justify-content: center;
+    display: flex;             /* Flexbox para colocar os botões lado a lado */
+    justify-content: center;   /* Centraliza os botões no meio da tela */
     margin-bottom: 32px;
 }
 
 .card-button {
-    display: inline-block;
+    display: inline-block;     /* Permite colocar margin/padding num link (<a>) */
     margin: 10px;
     padding: 10px 15px;
     background-color: #135209;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px;        /* Arredonda as pontas do botão */
     border: white;
 }
 
+/* ==========================================================================
+   6. SEÇÃO DE CURSOS E CARTÕES (Cards com Flexbox)
+   ========================================================================== */
 .courses {
     background-color: var(--cinza-claro);
     padding: 16px;
@@ -87,20 +116,152 @@ nav p {
 }
 
 .courses-cards {
-    display: flex;
-    justify-content: space-between;
-}   
+    display: flex;           /* Ativa o Flexbox para alinhar os cartões */
+    justify-content: center; /* Centraliza os cartões */
+    flex-wrap: wrap;         /* REGRA DE OURO DA RESPONSIVIDADE: Se não couber, joga para a linha de baixo! */
+    gap: 20px;               /* Cria um espaço uniforme entre os cartões (melhor que usar margin em cada um) */
+    padding: 20px 0;
+} 
 
 .card-course {
     position: relative;
     padding: 16px;
-    width: 300px;
+    width: 300px;            /* Largura fixa do cartão. O flex-wrap cuida de reposicioná-lo em telas pequenas */
     background-color: var(--branco);
-    margin: 32px;
     text-align: center;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2); /* Cria uma sombra para dar efeito de "cartão em pé" (Elevação) */
 }
 
 .card-course h3 {
     color: var(--verde-medio);
+}
+
+/* ==========================================================================
+   7. TABELA DE DADOS (Aula 03)
+   ========================================================================== */
+.datas {
+    max-width: 800px;
+    margin: 40px auto; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    
+    /* RESPONSIVIDADE: Se a tabela for maior que a tela do celular, 
+       cria uma barra de rolagem horizontal só para ela, não quebrando o site. */
+    overflow-x: auto; 
+}
+
+.datas h2 {
+    text-align: center; 
+    color: var(--verde-escuro); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%; 
+    /* REGRA DE OURO DAS TABELAS: Une as bordas das células numa linha única */
+    border-collapse: collapse; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.table thead tr {
+    background-color: var(--verde-escuro); 
+    color: #ffffff; 
+    text-align: left; 
+}
+
+.table th,
+.table td {
+    padding: 12px 15px; /* Evita que o texto encoste na linha da tabela */
+    border-bottom: 1px solid #dddddd; 
+    font-weight: bold;
+}
+
+/* Pseudo-classe: Pinta de cinza clarinho apenas as linhas pares (Zebra Striping) */
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+/* Pseudo-classe: Muda a cor da linha quando o mouse passa por cima */
+.table tbody tr:hover {
+    background-color: #e2e6ea; 
+    transition: background-color 0.3s ease; /* Faz a cor mudar suavemente */
+}
+
+/* ==========================================================================
+   8. FORMULÁRIO DE CONTATO
+   ========================================================================== */
+.contact {
+    background-color: var(--cinza-claro);
+    padding: 32px;
+}
+
+.contact h2 {
+    color: var(--verde-escuro);
+    font-size: 32px;
+    text-align: center;
+}
+
+.form form {
+    margin: 50px auto;
+    max-width: 360px;
+    display: flex;            /* Flexbox no formulário! */
+    flex-direction: column;   /* Muda a direção: empilha os campos de cima para baixo (coluna) */
+    gap: 8px;                 /* Espaço automático entre label, input e botão */
+}
+
+.form label {
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 4px;
+}
+
+.form input, .form textarea {
+    width: 100%;              /* Ocupa 100% da largura da caixa do formulário (360px) */
+    padding: 8px;             /* Espaço interno para o texto digitado */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.form input { height: 32px; }
+
+/* Botão do formulário */
+.form button {
+    color: var(--branco);
+    background-color: var(--verde-medio);
+    width: 100%;              /* 100% é melhor para mobile, o botão fica grande e fácil de clicar */
+    border-radius: 4px;
+    border: none;             /* Tira a borda 3D feia padrão dos navegadores */
+    height: 40px;             
+    margin-top: 12px;
+    font-weight: bold;
+    cursor: pointer;          /* Cursor vira 'mãozinha' para indicar que é clicável */
+}
+
+/* ==========================================================================
+   9. MEDIA QUERIES (Mobile First / Responsividade - Aula 05)
+   Tudo que estiver aqui dentro SÓ acontece se a tela for menor que 768px (Celulares/Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* Empilha a logo e o menu um embaixo do outro no celular */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Remove as margens laterais que faziam sentido no PC, mas apertam no celular */
+    nav p, #menu-links a {
+        margin: 0; 
+        padding: 8px;
+    }
+
+    /* O texto principal do Hero estava preso em 50%. No celular, ele precisa de mais espaço */
+    .content-epic .text-epic p {
+        max-width: 90%; 
+    }
 }
